@@ -11,8 +11,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    baselogic.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    baselogic.h
 
 FORMS    += mainwindow.ui

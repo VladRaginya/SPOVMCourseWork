@@ -14,25 +14,90 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTreeView" name="treeView">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>341</width>
-      <height>481</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTableView" name="tableView">
+   <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
       <x>360</x>
       <y>10</y>
       <width>671</width>
-      <height>481</height>
+      <height>471</height>
      </rect>
     </property>
+    <property name="showGrid">
+     <bool>true</bool>
+    </property>
+    <property name="sortingEnabled">
+     <bool>true</bool>
+    </property>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>222</number>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>220</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Name</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Type</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Data</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>341</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string/>
+     </property>
+    </column>
+    <item>
+     <property name="text">
+      <string>Computer</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>HKEY_CLASSES_ROOT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HKEY_CURRENT_USER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HKEY_LOCAL_MACHINE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HKEY_USERS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HKEY_CURRENT_CONFIG</string>
+      </property>
+     </item>
+    </item>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
