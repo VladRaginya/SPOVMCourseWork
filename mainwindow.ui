@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Registry Monitor</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTableWidget" name="tableWidget">
@@ -20,7 +20,7 @@
       <x>360</x>
       <y>10</y>
       <width>671</width>
-      <height>471</height>
+      <height>481</height>
      </rect>
     </property>
     <property name="showGrid">
@@ -58,43 +58,68 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
+      <y>10</y>
       <width>341</width>
-      <height>471</height>
+      <height>481</height>
      </rect>
     </property>
     <column>
      <property name="text">
-      <string/>
+      <string>Keys</string>
      </property>
     </column>
     <item>
      <property name="text">
       <string>Computer</string>
      </property>
+     <property name="icon">
+      <iconset>
+       <normalon>icons/folder.png</normalon>
+      </iconset>
+     </property>
      <item>
       <property name="text">
        <string>HKEY_CLASSES_ROOT</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/folder.png</normaloff>icons/folder.png</iconset>
       </property>
      </item>
      <item>
       <property name="text">
        <string>HKEY_CURRENT_USER</string>
       </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/folder.png</normaloff>icons/folder.png</iconset>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>HKEY_LOCAL_MACHINE</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/folder.png</normaloff>icons/folder.png</iconset>
       </property>
      </item>
      <item>
       <property name="text">
        <string>HKEY_USERS</string>
       </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/folder.png</normaloff>icons/folder.png</iconset>
+      </property>
      </item>
      <item>
       <property name="text">
        <string>HKEY_CURRENT_CONFIG</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/folder.png</normaloff>icons/folder.png</iconset>
       </property>
      </item>
     </item>
@@ -109,8 +134,51 @@
      <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <widget class="QMenu" name="menuDelete">
+     <property name="title">
+      <string>Delete</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="actionDeleteKey"/>
+     <addaction name="actionDeleteValue"/>
+    </widget>
+    <widget class="QMenu" name="menuAdd_new">
+     <property name="title">
+      <string>Add new</string>
+     </property>
+     <addaction name="actionAddKey"/>
+     <addaction name="actionAddValue"/>
+    </widget>
+    <addaction name="menuDelete"/>
+    <addaction name="menuAdd_new"/>
+   </widget>
+   <addaction name="menuMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAddKey">
+   <property name="text">
+    <string>Key</string>
+   </property>
+  </action>
+  <action name="actionAddValue">
+   <property name="text">
+    <string>Value</string>
+   </property>
+  </action>
+  <action name="actionDeleteKey">
+   <property name="text">
+    <string>Key</string>
+   </property>
+  </action>
+  <action name="actionDeleteValue">
+   <property name="text">
+    <string>Value</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
