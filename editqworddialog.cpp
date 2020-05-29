@@ -13,7 +13,7 @@ EditQwordDialog::EditQwordDialog(QWidget *parent, Controller* controller, QTable
     ui->setupUi(this);
     ui->lineEdit->setText(item1->text());
     ui->lineEdit->setEnabled(false);
-    ui->spinBox->setMaximum(4294967295);
+    ui->spinBox->setMaximum(2147483647);
     ui->spinBox->setValue(item2->text().toInt());
 }
 
